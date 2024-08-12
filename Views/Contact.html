@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/Contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,364;1,364&family=Noto+Sans:wght@699&family=Open+Sans:ital,wght@0,663;1,663&display=swap" rel="stylesheet">
+
+    <title>Contact - San Marcos USA</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    fetch('./Header/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            const menuIcon = document.getElementById('menuIcon');
+            const menuDropdown = document.getElementById('menuDropdown');
+
+            menuIcon.addEventListener('click', function() {
+                if (menuDropdown.style.display === "none" || menuDropdown.style.display === "") {
+                    menuDropdown.style.display = "block";
+                } else {
+                    menuDropdown.style.display = "none";
+                }
+            });
+        });
+});
+    </script>
+
+<div class="welcome-res">
+    <img class="responsive-box1" src="/Images/Contact/Cap01.png" alt="">
+    <img class="responsive-box2" src="/Images/Contact/Cap02.png" alt="">
+</div>
+
+    <div class="welcome">
+        <div class="welcome-image">
+            <img src="/Images/contacto-seccion.jpeg">
+            <div class="welcome-text">
+                <h2>Contact</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="service">
+        <h1>We're at your service</h1>
+    </div>
+    <div class="container">
+        <div class="location-card">
+            <div class="location-text">
+                <div class="icon01">
+                    <i aria-hidden="true" class="fas fa-map-marked-alt"></i>
+                </div>
+                <p>2202 Timberloch Place. STE. 127<br>
+                    The Woodlands, TX 77380</p>
+                <p>Tel: 1-832-479-7899</p>
+            </div>
+            <div class="social">
+                <div class="icon01">
+                    <i class="fab fa-rocketchat"></i>
+                </div>
+                <br>
+                <p>SOCIAL NETWORKS</p>
+                <div class="widget-container">
+                    <a href="https://www.facebook.com/SanMarcosUSA/"  target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sanmarcosus/"  target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="service">
+        <h1>Find us</h1>
+    </div>
+    <br>
+    <div class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4878.668158890499!2d-95.4723665321121!3d30
+        .158867557387936!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864736b7a3536a5f%3A0x8241e651123290ff!2s2202%20Timberloch%20Pl
+        %20%23127%2C%20Spring%2C%20TX%2077380!5e0!3m2!1ses-419!2sus!4v1722378658596!5m2!1ses-419!2sus" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    </div>
+    <br>
+    <div id="footer"></div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('./Footer/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el footer:', error));
+    });
+    </script>
+    <script src="https://kit.fontawesome.com/9d64be6393.js" crossorigin="anonymous"></script>
+</body>
+</html>

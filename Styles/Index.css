@@ -1,0 +1,261 @@
+.carousel-item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    width: 78%; 
+    margin: 0 auto; 
+    height: 550px;
+}
+
+.div1 {
+    position: relative;
+    grid-column: span 2 / span 2;
+    grid-row: span 6 / span 6;
+    background-image: url('/Images/about_singuarda.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.div1 button {
+    display: none;
+    position: absolute; /* Posicionamiento absoluto para el botón */
+    bottom: 60px; /* Separación desde la parte inferior */
+    left: 30px; /* Separación desde la izquierda */
+    z-index: 2; /* Asegúrate de que el botón esté por encima del pseudo-elemento */
+}
+
+.div1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Images/adorno.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.div1:hover::after {
+    display: none;
+}
+
+.div1:hover button {
+    display: block; /* Muestra el botón al hacer hover sobre .div1 */
+}
+
+.div1 h1 {
+    color: white;
+    font-size: 44px;
+    font-family: sans-serif;
+    font-weight: 400;
+    position: relative;
+    left: 5%;
+    top: 55%;
+}
+
+
+
+
+
+.div2 {
+    position: relative;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/Images/productosbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.div2 button {
+    display: none;
+    position: absolute; /* Posicionamiento absoluto para el botón */
+    bottom: 40px; /* Separación desde la parte inferior */
+    left: 30px; /* Separación desde la izquierda */
+    z-index: 2; /* Asegúrate de que el botón esté por encima del pseudo-elemento */
+}
+
+.div2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajusta la altura a un porcentaje menor */
+    background-image: url('/Images/adorno_prod.png');
+    background-size: 100% 100%; /* Ajusta la altura y mantiene el ancho automático */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.div2:hover::after {
+    display: none;
+}
+
+.div2:hover button {
+    display: block; /* Muestra el botón al hacer hover sobre .div2 */
+}
+
+
+.div2 h1 {
+    color: white;
+    font-size: 44px;
+    font-family: sans-serif;
+    font-weight: 400;
+    position: relative;
+    left: 5%;
+    top: 30%;
+}
+
+
+.div3 {
+    position: relative;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/Images/WOMAN-AT-STORE.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.div3 button {
+    display: none;
+    position: absolute; /* Posicionamiento absoluto para el botón */
+    bottom: 40px; /* Separación desde la parte inferior */
+    left: 30px; /* Separación desde la izquierda */
+    z-index: 2; /* Asegúrate de que el botón esté por encima del pseudo-elemento */
+}
+
+.div3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajusta la altura a un porcentaje menor */
+    background-image: url('/Images/adorno_prod.png');
+    background-size: 100% 100%; /* Ajusta la altura y mantiene el ancho automático */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.div3:hover::after {
+    display: none;
+}
+
+.div3:hover button {
+    display: block; /* Muestra el botón al hacer hover sobre .div3 */
+}
+
+
+
+
+.div3 h1 {
+    color: white;
+    font-size: 44px;
+    font-family: sans-serif;
+    font-weight: 400;
+    position: relative;
+    left: 5%;
+    top: 30%;
+}
+
+
+button {
+    border: 2px solid white; /* Borde blanco */
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Letras blancas */
+    padding: 12px 30px; /* Espaciado interno del botón, más ancho y largo */
+    font-size: 18px; /* Tamaño de fuente aumentado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s, color 0.3s; /* Efecto de transición suave */
+    border-radius: 5px; /* Bordes redondeados opcional */
+}
+
+button:hover {
+    background-color: white; /* Fondo blanco al pasar el cursor */
+    color: black; /* Letras negras al pasar el cursor */
+}
+
+
+
+
+@media (max-width: 600px) {
+    .parent {
+        grid-template-columns: 1fr; /* Una sola columna en la cuadrícula */
+        grid-template-rows: repeat(6, auto); /* Filas automáticas */
+        width: 95%; /* Ancho completo */
+        height: auto; /* Altura automática */
+        gap: 20px; /* Espacio reducido entre elementos */
+    }
+
+    .div1 {
+        grid-column: span 1 / span 1; /* Ocupa toda la columna */
+        grid-row: auto; /* Ajusta la fila automáticamente */
+        height: 350px; /* Altura fija para móviles, ajustable según sea necesario */
+    }
+
+    .div2, .div3 {
+        grid-column: span 1 / span 1; /* Ocupa toda la columna */
+        grid-row: auto; /* Ajusta la fila automáticamente */
+        height: 250px; /* Altura fija para móviles, ajustable según sea necesario */
+    }
+
+    .div1 button {
+        bottom: 50px; /* Menos separación desde la parte inferior en móviles */
+        left: 40px; /* Menos separación desde la izquierda en móviles */
+    }
+
+    .div2 button, .div3 button {
+        bottom: 40px; /* Menos separación desde la parte inferior en móviles */
+        left: 40px; /* Menos separación desde la izquierda en móviles */
+    }
+
+    .div1 h1, .div2 h1, .div3 h1 {
+        left: 10%; /* Ajusta la posición horizontal del texto */
+        top: 30%; /* Ajusta la posición vertical del texto */
+    }
+}
+
+/* Estilo para dispositivos de pantalla media (tablets en modo vertical) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .parent {
+        width: 99%; /* Ancho reducido */
+        height: 450px;
+    }
+
+    .div1 h1{
+        font-size: 40px;
+        left: 10%; /* Ajusta la posición horizontal del texto */
+        top: 50%;
+    }
+
+    .div2 h1, .div3 h1 {
+        font-size: 40px;
+        left: 10%; /* Ajusta la posición horizontal del texto */
+        top: 20%;
+    }
+}

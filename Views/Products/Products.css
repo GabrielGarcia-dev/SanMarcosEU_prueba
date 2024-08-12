@@ -1,0 +1,164 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-image {
+    position: relative;
+    width: 98%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 550px;
+}
+
+.main-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image-container {
+    position: relative;
+    width: 360px;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 13%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.image-container p {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2;
+    font-size: 20px;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Query para Tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .welcome {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-image {
+        height: 300px; /* Ajusta la altura según sea necesario */
+    }
+
+    .welcome-image img {
+        height: 100%;
+    }
+
+    .main-container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+        max-width: 360px; /* Limita el ancho máximo para mantener la proporción */
+    }
+
+    .image-container p {
+        font-size: 18px;
+        bottom: 10px;
+    }
+}
+
+/* Media Query para Teléfonos */
+@media (max-width: 768px) {
+    .welcome {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-image {
+        height: 200px; /* Ajusta la altura según sea necesario */
+    }
+
+    .welcome-image img {
+        height: 100%;
+    }
+
+    .main-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+        max-width: 360px; /* Limita el ancho máximo para mantener la proporción */
+    }
+
+    .image-container p {
+        font-size: 16px;
+        bottom: 5px;
+    }
+}

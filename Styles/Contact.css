@@ -1,0 +1,291 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-image {
+    position: relative;
+    width: 90%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    transform: translate(-145%, -80%);
+    color: white;
+    text-align: center;
+}
+
+.welcome-text h2 {
+    margin: 0;
+    font-size: 55px;
+    text-align: left;
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+}
+
+.service h1{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 364;
+  font-style: normal;
+  font-size: 50px;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.location-card {
+    display: flex;
+    width: 80%;
+    height: 290px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.location-text,
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #081F40;
+    border-radius: 10px;
+}
+
+.location-text {
+    justify-content: center;
+    color: white;
+    flex: 0 0 60%;
+}
+
+.social {
+    flex: 0 0 40%;
+    padding-top: 50px;
+    position: relative;
+}
+
+.social i {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.social p {
+    font-size: 20px;
+    color: white;
+}
+
+
+.location-text i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.location-text i.fa-map-marked-alt,
+.social i.fa-rocketchat {
+    font-size: 50px;
+}
+
+.social i.fa-rocketchat {
+    margin-top: 0;
+}
+
+.social p:first-of-type {
+    margin-top: 5px;
+}
+
+.widget-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.widget-container i {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.widget-container .fa-facebook {
+    border: 2px solid #36538F;
+    background-color: #36538F;
+}
+
+.widget-container .fa-instagram {
+    border: 2px solid #232528;
+    background-color: #232528;
+}
+
+.widget-container i:hover {
+    color: #000;
+}
+
+.widget-container .fa-facebook:hover {
+    background-color: #fff;
+    color: #1877F2;
+}
+
+.widget-container .fa-instagram:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.location iframe {
+    width: 99%;
+    height: 650px;
+    margin: 0 auto;
+}
+
+.welcome-res {
+    display: none;
+}
+
+/* Media Query para Tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .welcome {
+        display: none;
+    }
+
+    .welcome {
+        display: none;
+    }
+
+    .welcome-res {
+        display: flex;
+        justify-content: center;
+    }
+
+    .responsive-box2 {
+        display: none;
+    }
+
+    .responsive-box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 93%;
+        margin: 0 auto; /* Centra el contenedor en el medio horizontalmente */
+    }
+    
+    .responsive-box1 img {
+        width: 100%; /* Ajusta la imagen al 95% del ancho del contenedor */
+        height: 170px; /* Establece la altura fija de la imagen */
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    }
+
+    .location-card {
+        width: 95%;
+        height: 300px; /* Ajusta la altura según sea necesario */
+    }
+
+    .location iframe {
+        height: 400px; /* Ajusta la altura según sea necesario */
+    }
+}
+
+/* Media Query para Teléfonos */
+@media (max-width: 768px) {
+    .welcome {
+        display: none; /* Ajusta esto según lo que quieras mostrar en teléfonos */
+    }
+
+    .welcome-res {
+        display: block;
+    }
+
+    .responsive-box1 {
+        display: none;
+    }
+
+    .responsive-box2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 88%;
+        margin: 0 auto;
+    }
+
+
+    .service {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .location-card {
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .location-text, .social {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .location-text {
+        flex: 1;
+    }
+
+    .social {
+        flex: 1;
+        padding-top: 10px;
+    }
+
+    .widget-container {
+        position: static;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .widget-container i {
+        font-size: 20px;
+        padding: 4px;
+    }
+
+    .location iframe {
+        height: 600px; /* Ajusta la altura según sea necesario */
+    }
+}

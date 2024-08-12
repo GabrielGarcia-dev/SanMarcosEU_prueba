@@ -1,0 +1,437 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-image {
+    position: relative;
+    width: 90%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-198%, -80%);
+    color: white;
+    text-align: center;
+}
+
+.welcome-text h2 {
+    margin: 0;
+    font-size: 40px;
+    text-align: left;
+}
+
+@keyframes slideImage {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    width: 85%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: slideImage 1s ease-out;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    flex: 1;
+    margin-left: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    animation: slideText 1s ease-out;
+}
+
+.text h1 {
+    margin: 0 0 10px;
+    font-size: 50px;
+    color: #333;
+}
+
+.text p {
+    margin: 10;
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.text strong {
+    color: #333;
+}
+
+.stories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.story {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity .5s ease-out, transform .5s ease-out;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+}
+
+.story.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content2 {
+    display: flex;
+    width: 76%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image2 img {
+    width: 100%;
+    height: 80%;
+    display: block;
+    margin-top: 75px;
+}
+
+.text2 {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text2 h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    color: #333;
+}
+
+.text2 p {
+    margin-left: 8px;
+    margin: 10;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.text2 strong {
+    color: #333;
+}
+
+.button-sr {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.button-sr a button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: #FED330;
+    color: blue;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-sr a button:hover {
+    background-color: blue;
+    color: rgb(255, 255, 255);
+}
+
+
+.slider-standars {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #0C1C3F, #044B76);
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.slider-standars h1 {
+    margin: 20px 0 0; 
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.slider {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+.welcome-res {
+    display: none;
+}
+
+
+/* General styles for mobile */
+@media (max-width: 768px) {
+
+    .welcome {
+        display: none;
+    }
+
+    .welcome-res {
+        display: block;
+    }
+
+    .responsive-box1 {
+        display: none;
+    }
+
+    .responsive-box2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto; /* Centra el contenedor en el medio horizontalmente */
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    .stories {
+        width: 100%;
+    }
+
+    .main-container2 {
+        flex-direction: column;
+    }
+
+    .content2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .image2 img {
+        height: auto;
+        margin-top: 0;
+    }
+
+    .text2 h1 {
+        font-size: 24px;
+    }
+
+    .text2 p {
+        font-size: 0.9em;
+    }
+
+    .button-sr a button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .slider-standars h1 {
+        font-size: 24px;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .slider .slide img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .welcome {
+        display: none;
+    }
+
+    .welcome-res {
+        display: block;
+    }
+
+    .responsive-box2 {
+        display: none;
+    }
+    
+    .responsive-box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 99%;
+        margin: 0 auto; /* Centra el contenedor en el medio horizontalmente */
+    }
+    
+    .responsive-box1 img {
+        width: 95%; /* Ajusta la imagen al 95% del ancho del contenedor */
+        height: 170px; /* Establece la altura fija de la imagen */
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    }
+    
+
+    .main-container {
+        flex-direction: row;
+    }
+
+    .content {
+        flex-direction: row;
+        width: 98%;
+        height: 480px;
+    }
+
+    .text {
+        margin-left: 20px;
+    }
+
+    .text h1 {
+        font-size: 31px;
+    }
+
+    .text p {
+        font-size: .9em;
+    }
+
+    .stories {
+        width: 80%;
+    }
+
+    .main-container2 {
+        flex-direction: row;
+    }
+
+    .content2 {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .text2 h1 {
+        font-size: 28px;
+    }
+
+    .text2 p {
+        font-size: 0.95em;
+    }
+
+    .button-sr a button {
+        padding: 12px 25px;
+        font-size: 17px;
+    }
+
+    .slider-standars h1 {
+        font-size: 26px;
+    }
+
+    .slider .slide img {
+        width: 120px;
+        height: 120px;
+    }
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Products.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Products Archives - San Marcos USA</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    fetch('/Views/Header/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            const menuIcon = document.getElementById('menuIcon');
+            const menuDropdown = document.getElementById('menuDropdown');
+
+            menuIcon.addEventListener('click', function() {
+                if (menuDropdown.style.display === "none" || menuDropdown.style.display === "") {
+                    menuDropdown.style.display = "block";
+                } else {
+                    menuDropdown.style.display = "none";
+                }
+            });
+        });
+});
+    </script>
+    
+    <div class="welcome">
+        <div class="welcome-image">
+            <img src="./Images/279049260_1677768135899123_1916608044924465718_n-2048x779.jpg">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="main-container">
+        <div class="products">
+            <div class="product">
+                <a href="/Views/Products/Chilies/chilies.html">
+                    <div class="image-container">
+                        <img src="./Images/chilpotlepeppersadobo (1).png" alt="Chipotle Peppers">
+                        <p>Chiles</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="/Views/Products/Sauces/sauces.html">
+                    <div class="image-container">
+                        <img src="./Images/guacamolesalsa-1.png" alt="Jalapeño Peppers">
+                        <p>Salsas</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="/Views/Products/Vegetables/vegetables.html">
+                    <div class="image-container">
+                        <img src="./Images/tendercatuscan-1.png" alt="Serrano Peppers">
+                        <p>Vegetables</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="/Views/Products/Beans/beans.html">
+                    <div class="image-container">
+                        <img src="./Images/bagrefriedblackbeans-1.png" alt="Red Jalapeño Peppers">
+                        <p>Beans</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product">
+                <a href="/Views/Products/Hot-Sauces/hot-sauces.html">
+                    <div class="image-container">
+                        <img src="./Images/chipotlehotsauce.png" alt="Dried Peppers">
+                        <p>Hot Sauces</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div id="component-container"></div>
+    <script>
+        function loadComponent() {
+            fetch('/Views/Contact Us/Contact-Us.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('component-container').innerHTML = data;
+                });
+        }
+        window.onload = loadComponent;
+    </script>
+    <br><br>
+    <div id="footer"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('/Views/Footer/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => console.error('Error al cargar el footer:', error));
+        });
+    </script>
+</body>
+</html>

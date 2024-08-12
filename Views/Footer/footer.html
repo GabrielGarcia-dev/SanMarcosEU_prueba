@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer de Página San Marcos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #081F40;
+            color: #fff;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .seccion-footer {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .seccion-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .seccion-logo img.logotipo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .seccion-logo .desde {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .seccion-enlaces ul, .seccion-contacto ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .seccion-enlaces ul li, .seccion-contacto ul li {
+            margin-bottom: 10px;
+        }
+
+        .seccion-enlaces ul li a, .seccion-contacto ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .seccion-enlaces ul li a:hover, .seccion-contacto ul li a:hover {
+            color: #f0b429;
+        }
+
+        .seccion-social {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .seccion-social p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .seccion-social .iconos-redes-sociales {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .seccion-social .iconos-redes-sociales a {
+            color: #fff;
+            font-size: 28px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .seccion-social .iconos-redes-sociales a:hover {
+            color: #f0b429;
+            transform: scale(1.1);
+        }
+
+        .seccion-social .numero-telefono {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .seccion-footer {
+                flex: none;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .iconos-redes-sociales a {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="contenedor">
+            <div class="seccion-footer seccion-social">
+                <div class="iconos-redes-sociales">
+                    <a href="https://www.facebook.com/SanMarcosUSA" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sanmarcosus/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

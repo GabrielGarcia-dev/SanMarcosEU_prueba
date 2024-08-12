@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/About-us.css">
+    <title>About Us - San Marcos USA</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    fetch('/Views/Header/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            const menuIcon = document.getElementById('menuIcon');
+            const menuDropdown = document.getElementById('menuDropdown');
+
+            menuIcon.addEventListener('click', function() {
+                if (menuDropdown.style.display === "none" || menuDropdown.style.display === "") {
+                    menuDropdown.style.display = "block";
+                } else {
+                    menuDropdown.style.display = "none";
+                }
+            });
+        });
+});
+    </script>
+    <div class="welcome-res">
+        <img class="responsive-box1" src="/Images/About-us/caps/Cap1.png" alt="">
+        <img class="responsive-box2" src="/Images/About-us/caps/Cap2.png" alt="">
+    </div>
+    <div class="welcome">
+        <div class="welcome-image">
+            <img src="/Images/nosotros-seccion.jpeg">
+            <div class="welcome-text">
+                <h2>About Us</h2>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="main-container">
+        <div class="content">
+            <div class="image">
+                <img src="/Images/obreros-1.jpg" alt="Chipotle Peppers">
+            </div>
+            <div class="text">
+                <h1>From Mexico to the World</h1>
+                <p>San Marcos Company started manufacturing cans in Puebla Mexico in 1949, this was the  activity that initiated our presently well-known canned products.</p>
+                <p>In 1974, San Marcos in USA begins its distribution in the West Coast and rapidly continue with the expansion across the region.</p>
+                <p>Thanks to the quality of our products and the awareness on our products, specially in Jalapeño and Chipotle Peppers, we are currently the favorite brand of Hispanic families.</p>
+                <p>Everyday, San Marcos Team is continue working to bring our traditional Mexican flavors to all dining tables and kitchens of USA.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="stories">
+        <div class="story">
+            <div class="story-image">
+                <img src="/Images/historia-1-2048x393.jpg">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="story">
+            <div class="story-image">
+                <img src="/Images/historia-2-2048x443.jpg">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="story">
+            <div class="story-image">
+                <img src="/Images/historia-3-2048x415.jpg">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="main-container2">
+        <div class="content2">
+            <div class="text2">
+                <h1>Sustainability Report</h1>
+                <p>Mexican food is not only spicy by nature, it’s spicy because it’s mexican. And that’s what makes it unique, like our chipotles and jalapeños, give your dishes a unique flavor and enjoy this delicious taste full of tradition.
+                    More than 6000 hectares are dedicated to its cultivation.</p>
+                <p>Our growth and value are maximized when we transform ourselves to grow and build a better world. We are part of the solutions, integrating the social, environmental and governance dimensions as the engine of our strategy and creation of shared value.</p>
+                <div class="button-sr">
+                    <a href="https://q8p54c.p3cdn1.secureserver.net/wp-content/uploads/2024/04/EN-INFORME-2022-SAN-MARCOS-low.pdf">
+                        <button>see report</button>
+                    </a>
+                </div>
+            </div>
+            <div class="image2">
+                <img src="/Images/reporte2022_eng.webp">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="slider-standars">
+        <br>
+        <h1>Standards and Certifications</h1>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="/Images/About-us/NCW_HechoEnMexico-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/FDA-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/NCW_Gluttenfree-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/hand-select-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/ideal-for-mexican-dishes-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/choleterol-free-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/special-accompaniment-to-your-dishes-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/vegan-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/no-preservatives-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/traditional-mexican-harvest-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/plant-based-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/fresh-vegetables-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/low-calorine-per-serving-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/original-recipe-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/FSSC-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/NCW_Halal-150x150.webp" alt="">
+                </div>
+    
+                <div class="slide">
+                    <img src="/Images/About-us/NCW_HechoEnMexico-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/FDA-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/NCW_Gluttenfree-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/hand-select-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/ideal-for-mexican-dishes-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/choleterol-free-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/special-accompaniment-to-your-dishes-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/vegan-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/no-preservatives-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/traditional-mexican-harvest-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/plant-based-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/fresh-vegetables-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/low-calorine-per-serving-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/original-recipe-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/FSSC-150x150.webp" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/Images/About-us/NCW_Halal-150x150.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+<div id="component-container"></div>
+<script>
+    function loadComponent() {
+        fetch('./Contact Us/Contact-Us.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('component-container').innerHTML = data;
+            });
+    }
+    window.onload = loadComponent;
+</script>
+<br>
+<br>
+<div id="footer"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('./Footer/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el footer:', error));
+    });
+</script>
+<script src="/Js/About-us.js"></script>
+</body>
+</html>
