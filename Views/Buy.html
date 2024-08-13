@@ -6,13 +6,36 @@
     <title>Buy - San Marcos USA</title>
     <style>
         .buy-image {
+            padding: 100px 0 0 0;
             width: 100%;
-            height: 597px;
+            height: 700px;
         }
         .buy-image img {
             display: block;
             margin: auto;
             width: 100%;
+        }
+
+
+        @media (max-width: 600px) {
+            .buy-image {
+            padding: 150px 0 0 0;
+            width: 100%;
+            height: auto;
+        }
+        .buy-image img {
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+        }
+
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .buy-image {
+                padding: 50px 0 0 0;
+                height: 500px;
+            }
         }
     </style>
 </head>
@@ -20,23 +43,37 @@
     <div id="header-placeholder"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    fetch('./Header/header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-placeholder').innerHTML = data;
-            const menuIcon = document.getElementById('menuIcon');
-            const menuDropdown = document.getElementById('menuDropdown');
-
-            menuIcon.addEventListener('click', function() {
-                if (menuDropdown.style.display === "none" || menuDropdown.style.display === "") {
-                    menuDropdown.style.display = "block";
-                } else {
-                    menuDropdown.style.display = "none";
-                }
-            });
+            fetch('/Views/Header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    const placeholder = document.getElementById('header-placeholder');
+                    const shadowRoot = placeholder.attachShadow({ mode: 'open' });
+                    shadowRoot.innerHTML = data;
+    
+                    const scripts = shadowRoot.querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        shadowRoot.appendChild(newScript);
+                    });
+    
+                    // Maneja eventos dentro del Shadow DOM
+                    const menuIcon = shadowRoot.getElementById('menuIcon');
+                    const menuDropdown = shadowRoot.getElementById('menuDropdown');
+                    menuIcon.addEventListener('click', function() {
+                        if (menuDropdown.style.display === "none" || menuDropdown.style.display === "") {
+                            menuDropdown.style.display = "block";
+                        } else {
+                            menuDropdown.style.display = "none";
+                        }
+                    });
+                })
+                .catch(error => console.error('Error fetching header:', error));
         });
-});
     </script>
+
+
+
     <div class="buy-image">
         <a href="https://www.amazon.com/sanmarcos" target="_blank" rel="noopener noreferrer">
             <img src="/Images/available-amazon-2048x718.png">
