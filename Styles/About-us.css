@@ -1,6 +1,7 @@
 .welcome {
     display: flex;
     justify-content: center;
+    padding: 105px 0 0 0;
 }
 
 .welcome-image {
@@ -78,17 +79,47 @@
     animation: slideText 1s ease-out;
 }
 
+/* Cambio .text h1 JOFM en About-us.css*/
+
 .text h1 {
-    margin: 0 0 10px;
-    font-size: 50px;
-    color: #333;
+    color: #000000; /* Negro */
+    color: rgb(0, 0, 0); /* Negro en RGB */
+    background-color: #000000; /* Fondo negro */
+    background-color: rgba(0, 0, 0, 0); /* Fondo negro con transparencia */
+
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat con respaldo en sans-serif */
+    font-size: 29px; /* Tamaño de fuente */
+    line-height: 41.6px; /* Altura de línea */
+    vertical-align: baseline; /* Alineación vertical */
+    letter-spacing: normal; /* Espaciado de letras */
+    word-spacing: 0px; /* Espaciado de palabras */
+
+    margin: 0px; /* Sin margen */
+    padding: 0px; /* Sin relleno */
+
+    font-weight: 600; /* Grosor de fuente */
+    font-style: normal; /* Estilo de fuente */
+    font-variant: normal; /* Variante de fuente */
+    font-kerning: auto; /* Kerning de fuente */
+    font-optical-sizing: auto; /* Tamaño óptico de fuente */
+    font-stretch: 100%; /* Estiramiento de fuente */
+    font-variation-settings: normal; /* Configuraciones de variación de fuente */
+    font-feature-settings: normal; /* Configuraciones de características de fuente */
+
+    text-transform: none; /* Sin transformación de texto */
+    text-decoration: none solid rgb(0, 0, 0); /* Sin decoración, con color de texto negro sólido */
+    text-align: start; /* Alineación de texto al inicio */
+    text-indent: 0px; /* Sangría de texto */
 }
+
+/* Cambio .text p JOFM en About-us.css*/
 
 .text p {
     margin: 10;
-    font-size: 1.2em;
-    color: #666;
+    color: black;
     line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; /* Letra delgada */
 }
 
 .text strong {
@@ -157,18 +188,49 @@
     flex-direction: column;
 }
 
+/* Cambio .text2 h1 JOFM en About-us.css*/
+
 .text2 h1 {
-    margin: 0 0 10px;
-    font-size: 32px;
-    color: #333;
+    color: #000000; /* Negro */
+    color: rgb(0, 0, 0); /* Negro en RGB */
+    background-color: #000000; /* Fondo negro */
+    background-color: rgba(0, 0, 0, 0); /* Fondo negro con transparencia */
+
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat con respaldo en sans-serif */
+    font-size: 29px; /* Tamaño de fuente */
+    line-height: 41.6px; /* Altura de línea */
+    vertical-align: baseline; /* Alineación vertical */
+    letter-spacing: normal; /* Espaciado de letras */
+    word-spacing: 0px; /* Espaciado de palabras */
+
+    margin: 0px; /* Sin margen */
+    padding: 0px; /* Sin relleno */
+        margin-bottom: 10px;
+
+
+    font-weight: 600; /* Grosor de fuente */
+    font-style: normal; /* Estilo de fuente */
+    font-variant: normal; /* Variante de fuente */
+    font-kerning: auto; /* Kerning de fuente */
+    font-optical-sizing: auto; /* Tamaño óptico de fuente */
+    font-stretch: 100%; /* Estiramiento de fuente */
+    font-variation-settings: normal; /* Configuraciones de variación de fuente */
+    font-feature-settings: normal; /* Configuraciones de características de fuente */
+
+    text-transform: none; /* Sin transformación de texto */
+    text-decoration: none solid rgb(0, 0, 0); /* Sin decoración, con color de texto negro sólido */
+    text-align: start; /* Alineación de texto al inicio */
+    text-indent: 0px; /* Sangría de texto */
 }
 
+/* Cambio .text2 p JOFM en About-us.css*/
+
 .text2 p {
-    margin-left: 8px;
-    margin: 10;
-    font-size: 1em;
-    color: #666;
+    margin: 8;
+    color: black;
     line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    font-weight: 300; /* Letra delgada */
 }
 
 .text2 strong {
