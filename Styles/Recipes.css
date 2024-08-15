@@ -1,6 +1,7 @@
 .welcome {
     display: flex;
     justify-content: center;
+    padding: 40px 0 0 0;
 }
 
 .welcome-image {
@@ -31,4 +32,34 @@
     margin: 10px auto;
     width: 90%;
     border-radius: 10px;
+}
+
+
+
+@media (max-width: 600px) {
+    .welcome {
+        padding: 100px 0 0 0;
+    }
+    .welcome-image {
+        height: 80px;
+    }
+
+    .welcome-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .recipes-images {
+        width: 100%;
+        padding: -100px 0 0 0;
+    }
+
+    .recipe h2 {
+        margin-left: 10px;
+        font-size: 24px;
+    }
+
+    .recipe img {
+        width: 100%;
+    }
 }

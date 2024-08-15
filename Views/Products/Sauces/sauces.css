@@ -1,6 +1,7 @@
 .welcome {
     display: flex;
     justify-content: center;
+    padding: 90px 0 0 0;
 }
 
 .welcome-image {
@@ -21,7 +22,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-157%, -80%);
+    transform: translate(-137%, -80%);
     color: white;
     text-align: center;
 }
